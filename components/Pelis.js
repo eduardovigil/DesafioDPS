@@ -1,0 +1,28 @@
+import { StatusBar } from 'expo-status-bar';
+import { StyleSheet, Text, View,SafeAreaView,ScrollView } from 'react-native';
+
+import {ListItem, Avatar} from 'react-native-elements' 
+
+import series from './Catelogo'
+export default function Lista2(){
+
+return(
+series.map((serie,i) =>{
+  if(serie.tv == "Pelicula"){
+ return(
+   <ListItem key={i}>
+   <Avatar source={{uri:serie.image}} ></Avatar>
+   <ListItem.Content>
+    <ListItem.Title>{serie.name}</ListItem.Title>
+    <ListItem.Subtitle>{serie.category}</ListItem.Subtitle>
+   </ListItem.Content>
+   <ListItem.Chevron/>
+   </ListItem>
+ )
+  }
+ 
+}
+
+)
+)
+}
